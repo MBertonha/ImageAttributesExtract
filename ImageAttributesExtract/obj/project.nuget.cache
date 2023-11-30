@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GlAnEOYbFC3YmMMUlxB/ObafYi4rf2CrG2R6hF0EqC9nvjLN9P6Pa9QJQTv+Q2m705tHzDwB1DidQpwtB5Szdg==",
+  "success": true,
+  "projectFilePath": "E:\\MyRepository\\ImageAttributesExtract\\ImageAttributesExtract\\ImageAttributesExtract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\berto\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\berto\\.nuget\\packages\\system.drawing.common\\8.0.0\\system.drawing.common.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
