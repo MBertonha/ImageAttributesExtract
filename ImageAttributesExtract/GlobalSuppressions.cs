@@ -7,3 +7,4 @@ using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Interoperability", "CA1416:Validar a compatibilidade da plataforma", Justification = "<Pendente>", Scope = "member", Target = "~M:ExtrairInformacoesImagem.Program.IdentificarCorOlhos(System.Drawing.Bitmap)~System.Drawing.Color")]
 [assembly: SuppressMessage("Interoperability", "CA1416:Validar a compatibilidade da plataforma", Justification = "<Pendente>", Scope = "member", Target = "~M:ExtrairInformacoesImagem.Program.EncontrarCorPredominante(System.Drawing.Bitmap)~System.Drawing.Color")]
+[assembly: SuppressMessage("Interoperability", "CA1416:Validar a compatibilidade da plataforma", Justification = "<Pendente>", Scope = "member", Target = "~M:ExtrairInformacoesImagem.Program.IdentificarCorRoupa(System.Drawing.Bitmap)~System.Drawing.Color")]

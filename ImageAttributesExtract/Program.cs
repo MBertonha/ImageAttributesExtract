@@ -8,7 +8,7 @@ namespace ExtrairInformacoesImagem
     {
         static void Main()
         {
-            string diretorioImagens = @"C:\Imagens";
+            string diretorioImagens = @"E:\Imagens";
 
             if (Directory.Exists(diretorioImagens))
             {
@@ -16,9 +16,11 @@ namespace ExtrairInformacoesImagem
 
                 Color corCabelo = IdentificarCorCabelo(imagem);
                 Color corOlhos = IdentificarCorOlhos(imagem);
+                Color corRoupa = IdentificarCorRoupa(imagem);
 
                 Console.WriteLine($"Cor do cabelo: {corCabelo}");
                 Console.WriteLine($"Cor dos olhos: {corOlhos}");
+                Console.WriteLine($"Cor da roupa: {corRoupa}");
             }
             else
             {
@@ -54,6 +56,22 @@ namespace ExtrairInformacoesImagem
             Color corPredominanteOlhos = EncontrarCorPredominante(regiaoOlhos);
 
             return corPredominanteOlhos;
+        }
+
+        static Color IdentificarCorRoupa(Bitmap imagem)
+        {
+
+            int yInicioRoupa = imagem.Height / 4;
+            int alturaRegiaoRoupa = imagem.Height - yInicioRoupa;
+
+            // Extrair a região que provavelmente contém as roupas
+            Rectangle retanguloRegiaoRoupa = new Rectangle(0, yInicioRoupa, imagem.Width, alturaRegiaoRoupa);
+            Bitmap regiaoRoupa = imagem.Clone(retanguloRegiaoRoupa, imagem.PixelFormat);
+
+            // Encontrar a cor predominante na região das roupas
+            Color corPredominanteRoupa = EncontrarCorPredominante(regiaoRoupa);
+
+            return corPredominanteRoupa;
         }
 
         static Color EncontrarCorPredominante(Bitmap imagem)
